@@ -1,5 +1,4 @@
 import { NavigationContainer, NavigationContainerRefWithCurrent } from '@react-navigation/native'
-import { useMemo } from 'react'
 
 export function NavigationProvider({
   navigationRef,
@@ -17,51 +16,7 @@ export function NavigationProvider({
     ],
     config: {
       screens: {
-        tab: {
-          screens: {
-            home: {
-              screens: {
-                dashboard: '',
-              },
-            },
-            discover: {
-              screens: {
-                search: 'discover',
-              },
-            },
-          },
-        },
-        comments: 'comments/:publicId',
-        profile: 'profile/:username',
-        scenario: 'scenario/:publicId',
-        world: 'world/:publicId',
-        adventure: 'adventure/:publicId',
-        scenarioPlay: 'scenario/:publicId/play',
-        adventureEdit: 'adventure/:publicId/edit',
-        adventureImageEdit: 'adventure/:publicId/edit-image',
-        adventurePlay: 'adventure/:publicId/play',
-        dev: 'developer',
-        devOverlays: 'developer/overlays',
-        devScreens: 'developer/screens',
-        loginRegister: 'signin',
-        logout: 'signout',
-        multiplayerStart: 'multiplayer',
-        newGame: 'new',
-        newNativeUpdate: 'update',
-        plan: 'plans',
-        pricing: 'membership',
-        profileEdit: 'profile/:publicId/edit',
-        scenarioEdit: 'scenario/:publicId/edit',
-        scenarioImageEdit: 'scenario/:publicId/edit-image',
-        scenarioScripts: 'scenario/:publicId/scripts',
         settings: 'settings',
-        steamSuccess: 'steam-success',
-        subscription: 'subscription',
-        updateAvatar: 'update-avatar',
-        upvotyLogin: 'upvoty-signin',
-        worldEdit: 'world/:publicId/edit',
-        worldPlay: 'world/:publicId/play',
-        worldInfo: 'world/:publicId/info',
       },
     },
   }
