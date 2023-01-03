@@ -21,13 +21,6 @@ export function NativeNavigation() {
           title: 'Home',
         }}
       />
-      <Stack.Screen
-        name="user-detail"
-        component={UserDetailScreen}
-        options={{
-          title: 'User',
-        }}
-      />
     </Stack.Navigator>
   )
 }
