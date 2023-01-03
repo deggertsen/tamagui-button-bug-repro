@@ -6,14 +6,11 @@ export function HomeScreen() {
 
   return (
     <YStack f={1} jc="center" ai="center" p="$4" space>
-      <XStack mb="5c">
+      <XStack>
         <H1>User{`\n`}Settings</H1>
       </XStack>
       <YStack overflow="hidden">
           <Anchor
-            mb="1px"
-            bg="muted.800"
-            p="3c"
             href="/login"
             accessibilityLabel="Login Button"
             accessibilityHint="log in"
