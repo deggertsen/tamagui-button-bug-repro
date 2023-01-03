@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/alt-text */
 /* Alan - this component is used outside of the NativeBaseProvider context.
 As a result, only React Native primitives and explicit styles can be used in this component. */
 
