@@ -5,9 +5,6 @@ import { HomeScreen } from '../../features/home/screen'
 
 const Stack = createNativeStackNavigator<{
   home: undefined
-  'user-detail': {
-    id: string
-  }
 }>()
 
 export function NativeNavigation() {
