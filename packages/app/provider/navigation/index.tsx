@@ -16,7 +16,7 @@ export function NavigationProvider({
     ],
     config: {
       screens: {
-        settings: 'settings',
+        home: '',
       },
     },
   }
