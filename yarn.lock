@@ -2670,6 +2670,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@invertase/react-native-apple-authentication@npm:^2.2.2":
+  version: 2.2.2
+  resolution: "@invertase/react-native-apple-authentication@npm:2.2.2"
+  checksum: d51c121eba66721e914c16bfa352929b03bf8f6a38aae4b06157ee3399d0ecdc42bd53d5e655ae39b460ec7c759f87753d2c917bccedb3118e2c1bd75d6f874c
+  languageName: node
+  linkType: hard
+
 "@jest/create-cache-key-function@npm:^29.0.3":
   version: 29.3.1
   resolution: "@jest/create-cache-key-function@npm:29.3.1"
@@ -3441,6 +3448,20 @@ __metadata:
   peerDependencies:
     "@react-native-firebase/app": 16.5.0
   checksum: ea453eb4df05e2787a93525ddddc77a29b2cc070ddd9b26526310df4060f548b4a6b94ffdb1ebe1122005dc9b846782f2719dcba79b93ba7fcaa4d904df862a7
+  languageName: node
+  linkType: hard
+
+"@react-native-google-signin/google-signin@npm:^9.0.2":
+  version: 9.0.2
+  resolution: "@react-native-google-signin/google-signin@npm:9.0.2"
+  peerDependencies:
+    expo: ">=47.0.0"
+    react: "*"
+    react-native: "*"
+  peerDependenciesMeta:
+    expo:
+      optional: true
+  checksum: 4b9d0901ab53317de138f86141491da0159dc5b823f7de81fce07a4b8fe16cce463ad9e3a6f52f6f928eaf50db5311738b6b89658306f0d617a187ba62b9b5da
   languageName: node
   linkType: hard
 
@@ -7772,6 +7793,7 @@ __metadata:
     "@babel/core": ^7.17.9
     "@babel/runtime": ^7.18.9
     "@expo/metro-config": ^0.3.21
+    "@invertase/react-native-apple-authentication": ^2.2.2
     "@my/ui": "*"
     "@react-native-async-storage/async-storage": ^1.17.11
     "@react-native-firebase/app": ^16.5.0
@@ -7780,6 +7802,7 @@ __metadata:
     "@react-native-firebase/dynamic-links": ^16.5.0
     "@react-native-firebase/messaging": ^16.5.0
     "@react-native-firebase/perf": ^16.5.0
+    "@react-native-google-signin/google-signin": ^9.0.2
     "@tamagui/babel-plugin": 1.0.2
     "@types/react-native": ~0.70.6
     app: "*"
