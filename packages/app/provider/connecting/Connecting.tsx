@@ -11,11 +11,11 @@ import {
 } from 'react-native'
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context'
 
-import flame from '../../../../assets/images/load.gif'
+import flame from 'app/assets/images/load.gif'
 import Button, { Ghost } from './Button'
-import FakeButton from './FakeButton'
-import FakeCircle from './FakeCircle'
-import FakeLabel from './FakeLabel'
+// import FakeButton from './FakeButton'
+// import FakeCircle from './FakeCircle'
+// import FakeLabel from './FakeLabel'
 
 function Connecting({
   retryCallback = undefined,
@@ -64,7 +64,7 @@ function Connecting({
             paddingHorizontal: isBreakpointMobile ? 8 : 24,
           }}
         >
-          {isBreakpointMobile && <FakeCircle />}
+          {/* {isBreakpointMobile && <FakeCircle />} */}
           <View style={{ alignItems: 'center', flexDirection: 'row' }}>
             <Image
               accessibilityIgnoresInvertColors={false}
@@ -78,20 +78,20 @@ function Connecting({
             />
             {!isBreakpointMobile && (
               <>
-                <FakeLabel w={100} ml={40} />
-                <FakeLabel w={100} ml={40} />
+                {/* <FakeLabel w={100} ml={40} />
+                <FakeLabel w={100} ml={40} /> */}
               </>
             )}
           </View>
           {!isBreakpointMobile && (
             <View style={{ alignItems: 'center', flexDirection: 'row' }}>
-              <FakeCircle mr={8} />
+              {/* <FakeCircle mr={8} />
               <FakeCircle mr={8} />
               <FakeCircle mr={24} />
-              <FakeButton w={73} />
+              <FakeButton w={73} /> */}
             </View>
           )}
-          {isBreakpointMobile && <FakeCircle />}
+          {/* {isBreakpointMobile && <FakeCircle />} */}
         </View>
         <View
           style={{
