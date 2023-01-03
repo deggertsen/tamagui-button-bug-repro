@@ -16,7 +16,9 @@
     "@tamagui/lucide-icons": "^1.0.2",
     "@tamagui/shorthands": "^1.0.2",
     "@tamagui/theme-base": "^1.0.2",
+    "@types/lodash": "^4.14.191",
     "expo-linking": "^3.2.3",
+    "lodash": "^4.17.21",
     "solito": "2.0.0-canary.4"
   }
 }
