@@ -1,5 +1,7 @@
 import { toString } from 'lodash'
-
+import { initializeApp } from 'firebase/app'
+import { getAuth } from 'firebase/auth'
+import firebaseConfig from '../FirebaseConfig'
 import IBMPlexSans from '../../expo/assets/fonts/IBMPlexSans-Medium.ttf'
 import IBMPlexSerif from '../../expo/assets/fonts/IBMPlexSerif-Medium.ttf'
 import VoyageIcons from '../../expo/assets/fonts/VoyageIcons-Regular.ttf'
@@ -10,6 +12,12 @@ import Head from 'next/head'
 import React from 'react'
 import type { SolitoAppProps } from 'solito'
 import 'raf/polyfill'
+
+
+// Initialize Firebase
+const firebaseApp = initializeApp(firebaseConfig)
+// Initialize Auth
+getAuth(firebaseApp)
 
 function MyApp({ Component, pageProps }: SolitoAppProps) {
   const styleTemplate = `
