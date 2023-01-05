@@ -46,7 +46,10 @@
             "kotlinVersion": "1.6.21"
           }
         }
-      ]
+      ],
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth",
+      "@react-native-firebase/perf"
     ],
     "extra": {
       "eas": {

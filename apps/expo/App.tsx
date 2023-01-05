@@ -1,4 +1,3 @@
-import 'expo-dev-client'
 import React from 'react'
 import { NativeNavigation } from 'app/navigation/native'
 import { Provider } from 'app/provider'
