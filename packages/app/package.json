@@ -24,6 +24,7 @@
     "firebase": "^9.15.0",
     "graphql-ws": "^5.11.2",
     "lodash": "^4.17.21",
+    "native-base": "^3.4.25",
     "solito": "2.0.0-canary.4"
   },
   "devDependencies": {
