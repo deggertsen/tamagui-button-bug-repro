@@ -55,12 +55,10 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       "@react-native-firebase/crashlytics"
     ],
     extra: {
-      extra: {
-        NODE_ENV: process.env.NODE_ENV,
-        AI_DUNGEON_APP_URL: process.env.AI_DUNGEON_APP_URL,
-        LATITUDE_API_URL: process.env.LATITUDE_API_URL,
-        GRAPHQL_HTTP_URL: process.env.GRAPHQL_HTTP_URL,
-        GRAPHQL_WS_URL: process.env.GRAPHQL_WS_URL,
-      }
+      NODE_ENV: process.env.NODE_ENV,
+      AI_DUNGEON_APP_URL: process.env.AI_DUNGEON_APP_URL,
+      LATITUDE_API_URL: process.env.LATITUDE_API_URL,
+      GRAPHQL_HTTP_URL: process.env.GRAPHQL_HTTP_URL,
+      GRAPHQL_WS_URL: process.env.GRAPHQL_WS_URL,
     }
 })
