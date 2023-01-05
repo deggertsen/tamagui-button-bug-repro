@@ -1,5 +1,5 @@
 {
-  "name": "myapp-monorepo",
+  "name": "aidungeon",
   "private": true,
   "workspaces": [
     "apps/*",
