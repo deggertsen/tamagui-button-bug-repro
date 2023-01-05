@@ -4,9 +4,9 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "expo start --dev-client",
-    "android": "TAMAGUI_TARGET=native yarn expo run:android",
-    "ios": "TAMAGUI_TARGET=native yarn expo run:ios",
+    "start": "dotenv -e .env -- expo start --dev-client",
+    "android": "dotenv -e .env -- TAMAGUI_TARGET=native yarn expo run:android",
+    "ios": "dotenv -e .env -- TAMAGUI_TARGET=native yarn expo run:ios",
     "web": "TAMAGUI_TARGET=web yarn expo start --web",
     "eject": "expo eject"
   },
