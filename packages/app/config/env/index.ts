@@ -15,3 +15,8 @@ export const LATITUDE_API_URL: string = requiredString(
   Constants.expoConfig?.extra?.LATITUDE_API_URL,
   'LATITUDE_API_URL',
 )
+
+export const GRAPHQL_HTTP_URL: string = requiredString(
+  Constants.expoConfig?.extra?.GRAPHQL_HTTP_URL,
+  'GRAPHQL_HTTP_URL',
+)
