@@ -2818,18 +2818,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-codegen/add@npm:^3.2.3":
-  version: 3.2.3
-  resolution: "@graphql-codegen/add@npm:3.2.3"
-  dependencies:
-    "@graphql-codegen/plugin-helpers": ^3.1.1
-    tslib: ~2.4.0
-  peerDependencies:
-    graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
-  checksum: 98b1b17104b7e2fa82e9ed30e21160b02cce530d0ff72ce7794478677168ac6381a8d814cdd25d60b41b91b6446ebd592ba4820bd5ac138016f9097fa6ebc483
-  languageName: node
-  linkType: hard
-
 "@graphql-codegen/cli@npm:^2.16.3":
   version: 2.16.3
   resolution: "@graphql-codegen/cli@npm:2.16.3"
@@ -2923,19 +2911,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-codegen/typescript-resolvers@npm:^2.7.12":
-  version: 2.7.12
-  resolution: "@graphql-codegen/typescript-resolvers@npm:2.7.12"
+"@graphql-codegen/typescript-operations@npm:^2.5.12":
+  version: 2.5.12
+  resolution: "@graphql-codegen/typescript-operations@npm:2.5.12"
   dependencies:
     "@graphql-codegen/plugin-helpers": ^3.1.2
     "@graphql-codegen/typescript": ^2.8.7
     "@graphql-codegen/visitor-plugin-common": 2.13.7
-    "@graphql-tools/utils": ^9.0.0
     auto-bind: ~4.0.0
     tslib: ~2.4.0
   peerDependencies:
     graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
-  checksum: f8f60d972720f42f7407d91febfa4ae91f4e6cc2bd990babe85f8d1c77a3fa8dcc4ac85d8267ce24942703fc28ff6f38f4d8215e098f34fe1b35063aa08ef5a0
+  checksum: 9ce2281cb8b4adf8fbe8ac372277f5e9aef373c1e8e45fb064b8a2754417324f601399b12345d9352708eeb4fbeab004616c811bd016894271641d9da0606c62
   languageName: node
   linkType: hard
 
@@ -6279,10 +6266,9 @@ __metadata:
   resolution: "aidungeon@workspace:."
   dependencies:
     "@babel/runtime": ^7.18.9
-    "@graphql-codegen/add": ^3.2.3
     "@graphql-codegen/cli": ^2.16.3
     "@graphql-codegen/typescript": ^2.8.7
-    "@graphql-codegen/typescript-resolvers": ^2.7.12
+    "@graphql-codegen/typescript-operations": ^2.5.12
     "@manypkg/cli": ^0.19.1
     dotenv: ^16.0.3
     dotenv-cli: ^6.0.0
