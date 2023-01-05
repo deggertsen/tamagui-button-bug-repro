@@ -56,7 +56,8 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     ],
     extra: {
       extra: {
-        appUrl: process.env.AI_DUNGEON_APP_URL,
+        AI_DUNGEON_APP_URL: process.env.AI_DUNGEON_APP_URL,
+        LATITUDE_API_URL: process.env.LATITUDE_API_URL,
       }
     }
 })
