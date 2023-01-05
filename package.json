@@ -6,17 +6,18 @@
     "packages/*"
   ],
   "scripts": {
-    "native": "cd apps/expo && yarn start",
     "android": "cd apps/expo && yarn android",
+    "build": "yarn workspaces foreach --exclude next-app -pi run build",
     "ios": "cd apps/expo && yarn ios",
+    "native": "cd apps/expo && yarn start",
+    "postinstall": "yarn build",
+    "schema:generate": "graphql-codegen --config codegen.yml",
+    "upgrade:tamagui": "manypkg upgrade tamagui && manypkg upgrade @tamagui && manypkg upgrade tamagui-loader",
     "watch": "yarn workspaces foreach -pi run watch",
-    "web": "yarn build && cd apps/next && dotenv -e .env -- yarn next -p 3001",
+    "web": "yarn build && cd apps/next && dotenv -e ../../.env -- yarn next -p 3001",
     "web:extract": "DISABLE_EXTRACTION=false yarn workspace next-app dev",
     "web:prod": "yarn workspace next-app build",
-    "web:prod:serve": "yarn workspace next-app serve",
-    "postinstall": "yarn build",
-    "build": "yarn workspaces foreach --exclude next-app -pi run build",
-    "upgrade:tamagui": "manypkg upgrade tamagui && manypkg upgrade @tamagui && manypkg upgrade tamagui-loader"
+    "web:prod:serve": "yarn workspace next-app serve"
   },
   "resolutions": {
     "esbuild": "0.15.6",
@@ -33,6 +34,10 @@
     "dotenv-cli": "^6.0.0"
   },
   "devDependencies": {
+    "@graphql-codegen/add": "^3.2.3",
+    "@graphql-codegen/cli": "^2.16.3",
+    "@graphql-codegen/typescript": "^2.8.7",
+    "@graphql-codegen/typescript-resolvers": "^2.7.12",
     "@manypkg/cli": "^0.19.1",
     "eslint": "^8.21.0",
     "prettier": "^2.7.1",
