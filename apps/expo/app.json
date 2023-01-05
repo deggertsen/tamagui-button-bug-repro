@@ -20,7 +20,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.tamagui.myapp",
+      "bundleIdentifier": "com.aidungeon.app",
       "googleServicesFile": "./GoogleService-Info.plist"
     },
     "android": {
@@ -28,7 +28,7 @@
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.tamagui.myapp",
+      "package": "com.aidungeon",
       "googleServicesFile": "./google-services.json"
     },
     "web": {
@@ -46,11 +46,7 @@
             "kotlinVersion": "1.6.21"
           }
         }
-      ],
-      "@react-native-firebase/app",
-      "@react-native-firebase/auth",
-      "@react-native-firebase/perf",
-      "@react-native-firebase/crashlytics"
+      ]
     ],
     "extra": {
       "eas": {
