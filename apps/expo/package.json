@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "start": "dotenv -e .env -- expo start --dev-client",
-    "android": "dotenv -e .env -- TAMAGUI_TARGET=native yarn expo run:android",
-    "ios": "dotenv -e .env -- TAMAGUI_TARGET=native yarn expo run:ios",
+    "android": "dotenv -e .env -- yarn expo run:android",
+    "ios": "dotenv -e .env -- yarn expo run:ios",
     "web": "TAMAGUI_TARGET=web yarn expo start --web",
     "eject": "expo eject"
   },
