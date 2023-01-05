@@ -1,9 +1,9 @@
-const apiKey = process.env.REACT_APP_FIREBASE_API_KEY
-const authDomain = process.env.REACT_APP_FIREBASE_AUTH_DOMAIN
-const databaseURL = process.env.REACT_APP_FIREBASE_DATABASE_URL
-const projectId = process.env.REACT_APP_FIREBASE_PROJECT_ID
-const storageBucket = process.env.REACT_APP_FIREBASE_STORAGE_BUCKET
-const messagingSenderId = process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID
+const apiKey = process.env.NEXT_PUBLIC_FIREBASE_API_KEY
+const authDomain = process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+const databaseURL = process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL
+const projectId = process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID
+const storageBucket = process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+const messagingSenderId = process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
 
 const firebaseConfig = {
   apiKey,
