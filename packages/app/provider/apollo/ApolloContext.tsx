@@ -25,8 +25,8 @@ import { useAuthContext } from '../auth/AuthContext'
 import { getCurrentUser, getFirebaseToken } from '../auth/firebaseAuthFunctions'
 import Connecting from '../connecting/Connecting'
 
-const httpUrl = GRAPHQL_HTTP_URL ?? 'http://api.aidungeon.io/graphql'
-const wsUrl = GRAPHQL_WS_URL ?? 'ws://api.aidungeon.io/subscriptions'
+const httpUrl = GRAPHQL_HTTP_URL
+const wsUrl = GRAPHQL_WS_URL
 
 function ApolloContext({
   children,
