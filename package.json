@@ -10,7 +10,7 @@
     "android": "cd apps/expo && yarn android",
     "ios": "cd apps/expo && yarn ios",
     "watch": "yarn workspaces foreach -pi run watch",
-    "web": "yarn build && cd apps/next && yarn next -p 3001",
+    "web": "yarn build && cd apps/next && dotenv -e .env -- yarn next -p 3001",
     "web:extract": "DISABLE_EXTRACTION=false yarn workspace next-app dev",
     "web:prod": "yarn workspace next-app build",
     "web:prod:serve": "yarn workspace next-app serve",
@@ -28,7 +28,9 @@
     "react-native-web": "0.18.9"
   },
   "dependencies": {
-    "@babel/runtime": "^7.18.9"
+    "@babel/runtime": "^7.18.9",
+    "dotenv": "^16.0.3",
+    "dotenv-cli": "^6.0.0"
   },
   "devDependencies": {
     "@manypkg/cli": "^0.19.1",
