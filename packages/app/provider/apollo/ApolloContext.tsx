@@ -14,6 +14,7 @@ import { onError } from '@apollo/client/link/error'
 import { RetryLink } from '@apollo/client/link/retry'
 import { GraphQLWsLink } from '@apollo/client/link/subscriptions'
 import { getMainDefinition } from '@apollo/client/utilities'
+import { GRAPHQL_HTTP_URL, GRAPHQL_WS_URL } from 'app/config/env'
 import { createClient } from 'graphql-ws'
 import React, { useEffect, useMemo, useState } from 'react'
 
@@ -24,8 +25,8 @@ import { useAuthContext } from '../auth/AuthContext'
 import { getCurrentUser, getFirebaseToken } from '../auth/firebaseAuthFunctions'
 import Connecting from '../connecting/Connecting'
 
-const httpUrl = process.env.REACT_GRAPHQL_HTTP_URL ?? 'http://api.aidungeon.io/graphql'
-const wsUrl = process.env.REACT_GRAPHQL_WS_URL ?? 'ws://api.aidungeon.io/subscriptions'
+const httpUrl = GRAPHQL_HTTP_URL ?? 'http://api.aidungeon.io/graphql'
+const wsUrl = GRAPHQL_WS_URL ?? 'ws://api.aidungeon.io/subscriptions'
 
 function ApolloContext({
   children,
