@@ -1,0 +1,16 @@
+overwrite: true
+schema:
+  - http://localhost:8001/graphql:
+      headers:
+        X-Introspection: true
+documents: "packages/app/**/*.{ts,tsx}"
+generates:
+  packages/app/generated/graphql.tsx:
+    config:
+      nonOptionalTypename: true
+      scalars:
+        Date: string
+        DateTime: string
+    plugins:
+      - "typescript"
+      - "typescript-operations"
