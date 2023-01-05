@@ -19,3 +19,8 @@ export const GRAPHQL_HTTP_URL: string = requiredString(
     process.env.NEXT_PUBLIC_GRAPHQL_HTTP_URL,
     'NEXT_PUBLIC_GRAPHQL_HTTP_URL',
 )
+
+export const GRAPHQL_WS_URL: string = requiredString(
+    process.env.NEXT_PUBLIC_GRAPHQL_WS_URL,
+    'NEXT_PUBLIC_GRAPHQL_WS_URL',
+)

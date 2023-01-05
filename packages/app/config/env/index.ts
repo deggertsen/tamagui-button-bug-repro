@@ -20,3 +20,8 @@ export const GRAPHQL_HTTP_URL: string = requiredString(
   Constants.expoConfig?.extra?.GRAPHQL_HTTP_URL,
   'GRAPHQL_HTTP_URL',
 )
+
+export const GRAPHQL_WS_URL: string = requiredString(
+  Constants.expoConfig?.extra?.GRAPHQL_WS_URL,
+  'GRAPHQL_WS_URL',
+)
