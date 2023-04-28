@@ -1,11 +1,12 @@
-import { createFont, createTamagui } from 'tamagui'
+import { createTamagui } from 'tamagui'
+import { createInterFont } from '@tamagui/font-inter'
 import { shorthands } from '@tamagui/shorthands'
-import { themes, tokens } from '@tamagui/theme-base'
+import { themes, tokens } from '@tamagui/themes'
 import { createMedia } from '@tamagui/react-native-media-driver'
 
 import { animations } from './animations'
 
-const headingFont = createFont({
+const headingFont = createInterFont({
   size: {
     6: 15,
   },
@@ -32,46 +33,22 @@ const headingFont = createFont({
     14: -5,
     15: -6,
   },
-  // face: {
-  //   700: { normal: 'InterBold' },
-  // },
-  lineHeight: {6: 25},
-  family: 'ibm-plex-serif'
+  face: {
+    700: { normal: 'InterBold' },
+  },
 })
 
-const bodyFont = createFont({
-  size: {
-    6: 15,
+const bodyFont = createInterFont(
+  {
+    face: {
+      700: { normal: 'InterBold' },
+    },
   },
-  transform: {
-    6: 'uppercase',
-    7: 'none',
-  },
-  weight: {
-    6: '400',
-    7: '700',
-  },
-  color: {
-    6: '$colorFocus',
-    7: '$color',
-  },
-  letterSpacing: {
-    5: 2,
-    6: 1,
-    7: 0,
-    8: -1,
-    9: -2,
-    10: -3,
-    12: -4,
-    14: -5,
-    15: -6,
-  },
-  // face: {
-  //   700: { normal: 'InterBold' },
-  // },
-  lineHeight: {6: 25},
-  family: 'ibm-plex-sans'
-})
+  {
+    sizeSize: (size) => Math.round(size * 1.1),
+    sizeLineHeight: (size) => Math.round(size * 1.1 + (size > 20 ? 10 : 10)),
+  }
+)
 
 export const config = createTamagui({
   animations,

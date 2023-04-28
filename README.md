@@ -40,7 +40,7 @@ You can add other folders inside of `packages/` if you know what you're doing an
 
 - Next.js local dev: `yarn web`
 
-To run with optimizer on in dev mode (just for testing, it's faster to leave it off): `yarn web:extract`. To build for production `yarn:prod`.
+To run with optimizer on in dev mode (just for testing, it's faster to leave it off): `yarn web:extract`. To build for production `yarn web:prod`.
 
 To see debug output to verify the compiler, add `// debug` as a comment to the top of any file.
 
@@ -83,15 +83,11 @@ yarn
 
 You can also install the native library inside of `packages/app` if you want to get autoimport for that package inside of the `app` folder. However, you need to be careful and install the _exact_ same version in both packages. If the versions mismatch at all, you'll potentially get terrible bugs. This is a classic monorepo issue. I use `lerna-update-wizard` to help with this (you don't need to use Lerna to use that lib).
 
-You may potentially want to have the native module transpiled for the next app. Add the module name to the list for `withTM` in the [`apps/next/next.config.js`](apps/next/next.config.js#L47) file.
+You may potentially want to have the native module transpiled for the next app. If you get error messages with ```Cannot use import statement outside a module```, you may need to use `transpilePackages` in your `next.config.js` and add the module to the array there.
 
-```ts
-withTM([
-  'solito',
-  'react-native-web',
-  'expo-linking',
-  'expo-constants',
-  'expo-modules-core',
-  'expo-crypto', // <-- add this or any other native module
-])
-```
+### Deploying to Vercel
+
+- Root: `./apps/next`
+- Install command to be `yarn set version berry && yarn install`
+- Build command: leave default setting
+- Output dir: leave default setting

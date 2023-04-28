@@ -1,47 +1,41 @@
 {
-  "name": "aidungeon",
+  "name": "next-expo-solito-monorepo",
   "private": true,
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
   "scripts": {
-    "android": "cd apps/expo && yarn android",
-    "build": "yarn workspaces foreach --exclude next-app -pi run build",
-    "ios": "cd apps/expo && yarn ios",
     "native": "cd apps/expo && yarn start",
-    "postinstall": "yarn build",
-    "schema:generate": "graphql-codegen --config codegen.yml",
-    "upgrade:tamagui": "manypkg upgrade tamagui && manypkg upgrade @tamagui && manypkg upgrade tamagui-loader",
     "watch": "yarn workspaces foreach -pi run watch",
-    "web": "yarn build && cd apps/next && dotenv -e ../../.env -- yarn next -p 3001",
+    "vercel:install": "yarn set version 3.5 && yarn install",
+    "web": "yarn build && cd apps/next && yarn next",
     "web:extract": "DISABLE_EXTRACTION=false yarn workspace next-app dev",
     "web:prod": "yarn workspace next-app build",
-    "web:prod:serve": "yarn workspace next-app serve"
+    "web:prod:serve": "yarn workspace next-app serve",
+    "fix": "manypkg fix",
+    "postinstall": "yarn check-deps && yarn build",
+    "build": "yarn workspaces foreach --exclude next-app run build",
+    "upgrade:tamagui": "manypkg upgrade tamagui && manypkg upgrade @tamagui && manypkg upgrade tamagui-loader && manypkg upgrade react-native-web-lite",
+    "check-deps": "check-dependency-version-consistency ."
   },
   "resolutions": {
-    "esbuild": "0.15.6",
-    "@types/react": "17.0.21",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "@types/react-native": "^0.71.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-refresh": "^0.14.0",
     "react-native-svg": "13.4.0",
-    "react-native-web": "0.18.9"
+    "react-native-web": "^0.18.12"
   },
   "dependencies": {
     "@babel/runtime": "^7.18.9",
-    "dotenv": "^16.0.3",
-    "dotenv-cli": "^6.0.0"
-  },
-  "devDependencies": {
-    "@graphql-codegen/cli": "^2.16.3",
-    "@graphql-codegen/typescript": "^2.8.7",
-    "@graphql-codegen/typescript-operations": "^2.5.12",
     "@manypkg/cli": "^0.19.1",
+    "check-dependency-version-consistency": "^3.0.3",
     "eslint": "^8.21.0",
+    "node-gyp": "^9.3.1",
     "prettier": "^2.7.1",
-    "turbo": "^1.4.2",
+    "turbo": "^1.8.3",
     "typescript": "^4.7.4"
   },
-  "packageManager": "yarn@3.2.3"
+  "packageManager": "yarn@3.5.0"
 }

@@ -1,23 +1,38 @@
+import {
+  CustomToast,
+  TamaguiProvider,
+  TamaguiProviderProps,
+  ToastProvider,
+  ToastViewport,
+} from '@my/ui'
+import { useColorScheme } from 'react-native'
+
 import config from '../tamagui.config'
-import { NavigationProvider } from './navigation'
-import { TamaguiProvider, TamaguiProviderProps } from '@my/ui'
-import AuthContext from './auth/AuthContext'
-import ApolloContext from './apollo/ApolloContext'
-import UserContextProvider from './user/UserContext'
-// import DungeonVanilla from '@my/ui/src/DungeonVanilla'
 
 export function Provider({ children, ...rest }: Omit<TamaguiProviderProps, 'config'>) {
+  const scheme = useColorScheme()
   return (
-    <TamaguiProvider config={config} disableInjectCSS defaultTheme="light" {...rest}>
-      <NavigationProvider>
-        <AuthContext>
-          <ApolloContext>
-            <UserContextProvider>
-              {children}
-            </UserContextProvider>
-          </ApolloContext>
-        </AuthContext>
-      </NavigationProvider>
+    <TamaguiProvider
+      config={config}
+      disableInjectCSS
+      defaultTheme={scheme === 'dark' ? 'dark' : 'light'}
+      {...rest}
+    >
+      <ToastProvider
+        swipeDirection="horizontal"
+        duration={6000}
+        native={
+          [
+            /* uncomment the next line to do native toasts on mobile. NOTE: it'll require you making a dev build and won't work with Expo Go */
+            // 'mobile'
+          ]
+        }
+      >
+        {children}
+
+        <CustomToast />
+        <ToastViewport left={0} right={0} top={10} />
+      </ToastProvider>
     </TamaguiProvider>
   )
 }
