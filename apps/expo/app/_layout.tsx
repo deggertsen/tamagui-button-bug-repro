@@ -1,3 +1,4 @@
+import { Theme } from '@my/ui'
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native'
 import { Provider } from 'app/provider'
 import { useFonts } from 'expo-font'
@@ -17,7 +18,9 @@ export default function HomeLayout() {
   return (
     <Provider>
       <ThemeProvider value={scheme === 'dark' ? DarkTheme : DefaultTheme}>
+        <Theme name="core1">
         <Stack />
+        </Theme>
       </ThemeProvider>
     </Provider>
   )
