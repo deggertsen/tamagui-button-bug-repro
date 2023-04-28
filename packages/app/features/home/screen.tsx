@@ -14,7 +14,7 @@ export function HomeScreen() {
   return (
     <YStack f={1} jc="center" ai="center" p="$4" space>
       <XStack>
-        <CustomButton theme="primary" {...linkProps}>Link to user</CustomButton>
+        <CustomButton {...linkProps} theme="primary">Link to user</CustomButton>
       </XStack>
     </YStack>
   )
