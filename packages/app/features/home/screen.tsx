@@ -1,4 +1,5 @@
 import {
+  Theme,
   XStack,
   YStack,
 } from '@my/ui'
@@ -14,7 +15,9 @@ export function HomeScreen() {
   return (
     <YStack f={1} jc="center" ai="center" p="$4" space>
       <XStack>
+      <Theme name="core1">
         <CustomButton {...linkProps} theme="primary">Link to user</CustomButton>
+      </Theme>
       </XStack>
     </YStack>
   )
