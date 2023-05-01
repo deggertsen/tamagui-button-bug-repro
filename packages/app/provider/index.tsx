@@ -12,11 +12,11 @@ export function Provider({ children, ...rest }: Omit<TamaguiProviderProps, 'conf
     <TamaguiProvider
       config={config}
       disableInjectCSS
-      defaultTheme={scheme === 'dark' ? 'dark' : 'light'}
+      defaultTheme="dark"
+      disableRootThemeClass
       {...rest}
     >
         {children}
-
     </TamaguiProvider>
   )
 }
