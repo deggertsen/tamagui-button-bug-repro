@@ -4,7 +4,7 @@ import React, { forwardRef } from 'react'
 import { styled, GetProps, ButtonFrame, ButtonText, ButtonProps as TamaguiButtonProps, useButton } from 'tamagui'
 
 const CustomButtonFrame = styled(ButtonFrame, {
-  height: '$5',
+  padding: "$5",
   borderRadius: '$1',
   paddingHorizontal: '$2',
   variants: {
@@ -59,8 +59,9 @@ export type CustomButtonProps = TamaguiButtonProps &
   CustomButtonFrameProps &
   CustomButtonTextProps
 
-export const Button = CustomButtonFrame.styleable<CustomButtonProps>(forwardRef(
+export const UpdatedButton = CustomButtonFrame.styleable<CustomButtonProps>(forwardRef(
   (propsIn, ref) => {
   const { props } = useButton(propsIn, { Text: CustomButtonText })
+  // @ts-ignore
   return <CustomButtonFrame {...props} ref={ref} />
 }))
