@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
-import React, { forwardRef, Ref } from 'react'
-import { styled, TamaguiElement, GetProps, ButtonFrame, ButtonText, ButtonProps as TamaguiButtonProps, useButton } from 'tamagui'
+import React, { forwardRef } from 'react'
+import { styled, GetProps, ButtonFrame, ButtonText, ButtonProps as TamaguiButtonProps, useButton } from 'tamagui'
 
 const CustomButtonFrame = styled(ButtonFrame, {
   height: '$5',
