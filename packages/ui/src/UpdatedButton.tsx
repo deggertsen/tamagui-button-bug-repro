@@ -1,10 +1,16 @@
 /* eslint-disable react/jsx-props-no-spreading */
-
+import { GetProps } from '@tamagui/core'
 import React from 'react'
-import { styled, GetProps, ButtonFrame, ButtonText, ButtonProps as TamaguiButtonProps, useButton } from 'tamagui'
+import {
+  ButtonFrame,
+  ButtonText,
+  styled,
+  ButtonProps as TamaguiButtonProps,
+  useButton,
+} from 'tamagui'
 
 const CustomButtonFrame = styled(ButtonFrame, {
-  padding: "$5",
+  height: '$5',
   borderRadius: '$1',
   paddingHorizontal: '$2',
   variants: {
@@ -48,20 +54,20 @@ const CustomButtonFrame = styled(ButtonFrame, {
 })
 
 const CustomButtonText = styled(ButtonText, {
-  // ...
+  fontSize: '$2',
+  lineHeight: '$3',
+  textTransform: 'uppercase',
+  marginTop: 0,
+  marginBottom: 0,
 })
 
 // to capture the custom variant types you define
 type CustomButtonFrameProps = GetProps<typeof CustomButtonFrame>
 type CustomButtonTextProps = GetProps<typeof CustomButtonText>
 
-export type CustomButtonProps = TamaguiButtonProps &
-  CustomButtonFrameProps &
-  CustomButtonTextProps
+export type ButtonProps = TamaguiButtonProps & CustomButtonFrameProps & CustomButtonTextProps
 
-export const UpdatedButton = CustomButtonFrame.styleable<CustomButtonProps>(
-  (propsIn, ref) => {
+export const UpdatedButton = CustomButtonFrame.styleable<ButtonProps>((propsIn, ref) => {
   const { props } = useButton(propsIn, { Text: CustomButtonText })
-  // @ts-ignore
   return <CustomButtonFrame {...props} ref={ref} />
 })
