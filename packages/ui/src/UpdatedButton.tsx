@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
-import React, { forwardRef } from 'react'
+import React from 'react'
 import { styled, GetProps, ButtonFrame, ButtonText, ButtonProps as TamaguiButtonProps, useButton } from 'tamagui'
 
 const CustomButtonFrame = styled(ButtonFrame, {
@@ -59,9 +59,9 @@ export type CustomButtonProps = TamaguiButtonProps &
   CustomButtonFrameProps &
   CustomButtonTextProps
 
-export const UpdatedButton = CustomButtonFrame.styleable<CustomButtonProps>(forwardRef(
+export const UpdatedButton = CustomButtonFrame.styleable<CustomButtonProps>(
   (propsIn, ref) => {
   const { props } = useButton(propsIn, { Text: CustomButtonText })
   // @ts-ignore
   return <CustomButtonFrame {...props} ref={ref} />
-}))
+})
